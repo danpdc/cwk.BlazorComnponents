@@ -1,0 +1,31 @@
+﻿
+@inherits CWK.BlazorComponents.Chessboard.CwkChessboardModel;
+
+    <div class="row">
+        <div class="col-md-12">
+            <div style="text-align: center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="board" style="width: @Width; display: inline-block"></div>
+                    </div>
+                </div>
+                <div class="row" style="width: @Width; display:inline-block;">
+                    <div class="col-md-2" style="float:left">
+                        <button class="btn btn-primary" onclick="@Back">&lt</button>
+                    </div>
+                    <div class="col-md-8" style="float:left">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">FEN</span>
+                            </div>
+                            <input type="text" class="form-control" bind="@Fen" id="fen" />
+                        </div>
+                    </div>
+                    <div class="col-md-2" style="float:left">
+                        <button class="btn btn-primary" onclick="@Forward">&gt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
